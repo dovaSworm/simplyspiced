@@ -1,0 +1,453 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hammersmith+One&family=Kanit:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hammersmith+One&family=Kanit:wght@500&family=Mr+Dafoe&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hammersmith+One&family=Kanit:wght@500&family=Mr+Dafoe&family=Nothing+You+Could+Do&display=swap");
+body,
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 100%;
+  background-color: #1c293d;
+  color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh;
+  background-image: url(../img/hero-s.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: whitesmoke;
+  font-size: 115px;
+  font-family: "Bebas Neue", cursive;
+  margin: auto;
+  margin-top: 32%;
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 54px;
+  }
+}
+
+#navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+}
+
+#navbar a {
+  color: whitesmoke;
+}
+
+@media (min-width: 992px) {
+  #navbar .navbar-brand {
+    position: absolute;
+  }
+}
+
+#navbar.home {
+  background-color: #36645c;
+}
+
+#navbar.home .navbar-nav a {
+  width: 150px;
+  background: #1c293d;
+  margin: 0 5px;
+  text-align: center;
+  padding: 10px;
+  border-bottom: 4px solid #1c293d;
+  -webkit-clip-path: polygon(6% 0, 100% 0, 100% 83%, 94% 100%, 0 100%, 0 100%, 0 17%);
+          clip-path: polygon(6% 0, 100% 0, 100% 83%, 94% 100%, 0 100%, 0 100%, 0 17%);
+}
+
+@media (max-width: 767px) {
+  #navbar.home .navbar-nav a {
+    margin: 2px 0;
+  }
+}
+
+#navbar.home .navbar-nav a:hover {
+  border-bottom: 4px solid #e69561;
+}
+
+@media (max-width: 767px) {
+  #navbar.home .navbar-nav {
+    margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+#navbar.home .navbar-nav a.active {
+  background-color: #e69561;
+  border-bottom: 2px solid #e69561;
+}
+
+#navbar.proizvodi {
+  background-color: #1c293d;
+}
+
+#navbar.proizvodi .navbar-nav a {
+  width: 100px;
+  margin: 0 5px;
+  text-align: center;
+  border-bottom: 3px solid #1c293d;
+}
+
+@media (max-width: 767px) {
+  #navbar.proizvodi .navbar-nav a {
+    margin: 2px 0;
+  }
+}
+
+#navbar.proizvodi .navbar-nav a:hover {
+  border-bottom: 3px solid #e69561;
+}
+
+@media (max-width: 767px) {
+  #navbar.proizvodi .navbar-nav {
+    margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+#navbar.proizvodi .navbar-nav a.active {
+  border-bottom: 4px solid #85422c;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-brand img {
+  height: 60px;
+}
+
+.sticky-top {
+  position: fixed !important;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+.sticky-bottom {
+  bottom: 0;
+  position: absolute !important;
+  width: 100%;
+}
+
+main {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media (max-width: 767px) {
+  main {
+    padding-top: 50px;
+  }
+}
+
+main p {
+  text-align: justify;
+}
+
+main h3 {
+  padding-bottom: 10px;
+}
+
+main img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  main img {
+    width: 94%;
+  }
+}
+
+main #about h3 {
+  border-bottom: 3px solid #c69437;
+}
+
+main #about div.row img {
+  -webkit-box-shadow: 20px 20px #c69437;
+          box-shadow: 20px 20px #c69437;
+}
+
+main #soli h3 {
+  border-bottom: 3px solid #e69561;
+}
+
+main #soli div.row img {
+  -webkit-box-shadow: -20px 20px #e69561;
+          box-shadow: -20px 20px #e69561;
+}
+
+@media (max-width: 767px) {
+  main #soli div.row img {
+    -webkit-box-shadow: 20px 20px #e69561;
+            box-shadow: 20px 20px #e69561;
+  }
+}
+
+main #suvi h3 {
+  border-bottom: 3px solid #85422c;
+}
+
+main #suvi div.row img {
+  -webkit-box-shadow: 20px 20px #85422c;
+          box-shadow: 20px 20px #85422c;
+}
+
+main #vizija h3 {
+  border-bottom: 3px solid #36645c;
+}
+
+main #vizija div.row img {
+  -webkit-box-shadow: -20px 20px #36645c;
+          box-shadow: -20px 20px #36645c;
+}
+
+@media (max-width: 767px) {
+  main #vizija div.row img {
+    -webkit-box-shadow: 20px 20px #36645c;
+            box-shadow: 20px 20px #36645c;
+  }
+}
+
+main div.img-holder {
+  height: 500px;
+  padding: 70px;
+}
+
+@media (max-width: 767px) {
+  main div.img-holder {
+    height: auto;
+    padding: 30px;
+  }
+}
+
+main div.text-holder {
+  padding: 62px;
+}
+
+@media (max-width: 767px) {
+  main div.text-holder {
+    padding: 10px;
+  }
+}
+
+main div.break {
+  width: 100%;
+  height: 20px;
+}
+
+@media (max-width: 767px) {
+  main div.break {
+    height: 10px;
+  }
+}
+
+.divider {
+  height: 4px;
+  width: calc(100%-140px);
+  background-color: red;
+  margin: 50px 0;
+}
+
+#recepti h2 {
+  color: #c69437;
+  font-size: 49px;
+  margin: 100px 0;
+}
+
+#proizvodi {
+  background-image: url(../img/hero1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.797);
+  background-blend-mode: overlay;
+}
+
+@media (max-width: 912px) {
+  #proizvodi {
+    margin-top: 55px;
+  }
+}
+
+#proizvodi h2 {
+  background: #1c293d;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 10px 50px;
+  margin: auto;
+  border-radius: 12px;
+  border-bottom: 13px solid #85422c;
+  font-size: 45px;
+}
+
+.prod-card {
+  background-color: #1c293d;
+  width: 90%;
+  height: 456px;
+  margin: auto;
+  margin-top: 200px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+@media (max-width: 912px) {
+  .prod-card {
+    margin-top: 120px;
+  }
+}
+
+.prod-card h3 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.prod-img-holder {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+.prod-img-holder img {
+  width: 200px;
+  height: auto;
+  margin-top: -100px;
+}
+
+#contact {
+  background-image: url(../img/kontakt-ss.jpg);
+  background-size: contain;
+  padding-top: 100px;
+}
+
+#contact h2 {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  font-size: 45px;
+}
+
+.contact-border-bottom {
+  width: 50%;
+  border-bottom: 2px solid #36645c;
+}
+
+@media (max-width: 1024px) {
+  .contact-border-bottom {
+    width: 100%;
+  }
+}
+
+.copyright {
+  background-color: #1c293d;
+}
+
+footer {
+  color: #ebebeb;
+}
+
+footer h4 {
+  margin-bottom: 0 !important;
+  margin-top: 10px;
+}
+
+footer a img {
+  margin: auto;
+  height: 40px;
+}
+
+.contact form input,
+.contact form textarea {
+  -webkit-box-shadow: inset 0px 4px 10px -5px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0px 4px 10px -5px rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(39, 65, 75, 0.74);
+  width: 100%;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+  display: block;
+  padding: 10px 15px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: 0;
+  /* background: rgba(3, 3, 3, 0.93); */
+  background: white;
+  font-size: 12pt;
+  margin-bottom: 3px;
+  color: black;
+}
+
+.contact form button {
+  width: 30%;
+  margin: auto;
+}
+
+.contact form button:hover {
+  color: #f46e43;
+}
+
+.contact a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.contact div.col-12.text-center {
+  margin: 10px 0;
+}
+
+.contact address,
+.contact a {
+  font-size: 23px;
+  margin-bottom: 0 !important;
+  color: white;
+}
+
+i {
+  color: #36645c;
+  margin-right: 15px;
+}
+
+@media (max-width: 767px) {
+  #about div.col-lg-6:last-of-type {
+    margin-top: 30px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

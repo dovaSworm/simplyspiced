@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kanit:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hammersmith+One&family=Kanit:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hammersmith+One&family=Kanit:wght@500&family=Mr+Dafoe&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Hammersmith+One&family=Kanit:wght@500&family=Mr+Dafoe&family=Nothing+You+Could+Do&display=swap");
+
+$zuta: #c69437;
+$narandza: #e69561;
+$crvena: #85422c;
+$plava: #36645c;
+$backcolor: #1c293d;
+
+body,
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    width: 100%;
+    // height: 3000px;
+    background-color: $backcolor;
+    color: whitesmoke;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    background-image: url(../img/hero-s.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-attachment: fixed;
+    @media (max-width: 767px) {
+        // height: 60vh;
+        // background-size: contain;
+    }
+}
+h1 {
+    color: whitesmoke;
+    font-size: 115px;
+    font-family: "Bebas Neue", cursive;
+    margin: auto;
+    margin-top: 32%;
+    @media (max-width: 767px) {
+        font-size: 54px;
+        // margin-top: 58%;
+    }
+    // font-family: 'Raleway', sans-serif;
+    // font-family: 'Hammersmith One', sans-serif;
+    // font-family: 'Nothing You Could Do', cursive;
+}
+
+#navbar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+
+    @media (max-width: 767px) {
+        //    top:0;
+    }
+    a {
+        color: whitesmoke;
+    }
+    .navbar-brand {
+        @media (min-width: 992px) {
+            position: absolute;
+        }
+    }
+}
+#navbar.home {
+    background-color: $plava;
+    .navbar-nav {
+        // margin: 0 !important;
+        a {
+            width: 150px;
+            background: $backcolor;
+            margin: 0 5px;
+            text-align: center;
+            padding: 10px;
+            border-bottom: 4px solid $backcolor;
+            clip-path: polygon(6% 0, 100% 0, 100% 83%, 94% 100%, 0 100%, 0 100%, 0 17%);
+            @media (max-width: 767px) {
+                margin: 2px 0;
+            }
+            &:hover {
+                border-bottom: 4px solid $narandza;
+            }
+        }
+        @media (max-width: 767px) {
+            margin: auto;
+            width: fit-content;
+        }
+        a.active {
+            background-color: $narandza;
+            border-bottom: 2px solid $narandza;
+        }
+    }
+}
+#navbar.proizvodi {
+    background-color: $backcolor;
+    .navbar-nav {
+        a {
+            width: 100px;
+            margin: 0 5px;
+            text-align: center;
+            border-bottom: 3px solid $backcolor;
+            @media (max-width: 767px) {
+                margin: 2px 0;
+            }
+            &:hover {
+                border-bottom: 3px solid $narandza;
+            }
+        }
+        @media (max-width: 767px) {
+            margin: auto;
+            width: fit-content;
+        }
+        a.active {
+            border-bottom: 4px solid $crvena;
+        }
+    }
+}
+.navbar-toggler {
+    border: none !important;
+}
+.navbar-brand img {
+    height: 60px;
+}
+
+.sticky-top {
+    position: fixed !important;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+}
+.sticky-bottom {
+    bottom: 0;
+    position: absolute !important;
+    width: 100%;
+}
+
+main {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    @media (max-width: 767px) {
+        padding-top: 50px;
+    }
+    p {
+        text-align: justify;
+    }
+    h3 {
+        padding-bottom: 10px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+        // margin: auto;
+        @media (max-width: 767px) {
+            width: 94%;
+        }
+    }
+    #about {
+        h3 {
+            border-bottom: 3px solid $zuta;
+        }
+        div.row {
+            img {
+                box-shadow: 20px 20px $zuta;
+            }
+        }
+    }
+    #soli {
+        h3 {
+            border-bottom: 3px solid $narandza;
+        }
+        div.row {
+            img {
+                box-shadow: -20px 20px $narandza;
+                @media (max-width: 767px) {
+                    box-shadow: 20px 20px $narandza;
+                }
+            }
+        }
+    }
+    #suvi {
+        h3 {
+            border-bottom: 3px solid $crvena;
+        }
+        div.row {
+            img {
+                box-shadow: 20px 20px $crvena;
+            }
+        }
+    }
+    #vizija {
+        h3 {
+            border-bottom: 3px solid $plava;
+        }
+        div.row {
+            img {
+                box-shadow: -20px 20px $plava;
+                @media (max-width: 767px) {
+                    box-shadow: 20px 20px $plava;
+                }
+            }
+        }
+    }
+
+    div.img-holder {
+        height: 500px;
+        padding: 70px;
+        @media (max-width: 767px) {
+            height: auto;
+            padding: 30px;
+        }
+    }
+    div.text-holder {
+        padding: 62px;
+        @media (max-width: 767px) {
+            // height: auto;
+            padding: 10px;
+        }
+    }
+    div.break {
+        width: 100%;
+        height: 20px;
+        @media (max-width: 767px) {
+            height: 10px;
+        }
+    }
+}
+
+.divider {
+    height: 4px;
+    width: calc(100%-140px);
+    background-color: red;
+    margin: 50px 0;
+}
+
+#recepti {
+    h2 {
+        color: #c69437;
+        font-size: 49px;
+        margin: 100px 0;
+    }
+}
+#proizvodi {
+    background-image: url(../img/hero1.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.797);
+    background-blend-mode: overlay;
+    @media (max-width: 912px) {
+        margin-top: 55px;
+    }
+    .row {
+        // margin-top: 200px;
+        // @media (max-width: 912px) {
+        //     margin-top: 20px;
+        // }
+    }
+    h2 {
+        background: #1c293d;
+        width: fit-content;
+        padding: 10px 50px;
+        margin: auto;
+        border-radius: 12px;
+        border-bottom: 13px solid #85422c;
+        font-size: 45px;
+    }
+}
+.prod-card {
+    background-color: #1c293d;
+    width: 90%;
+    height: 456px;
+    margin: auto;
+    margin-top: 200px;
+    padding: 15px;
+    border-radius: 8px;
+    @media (max-width: 912px) {
+        margin-top: 120px;
+    }
+    h3 {
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+.prod-img-holder {
+    width: fit-content;
+    margin: auto;
+    img {
+        width: 200px;
+        height: auto;
+        margin-top: -100px;
+    }
+}
+#contact {
+    background-image: url(../img/kontakt-ss.jpg);
+    background-size: contain;
+    padding-top: 100px;
+    // background-repeat: no-repeat;
+    // background-position: center bottom;
+    // background-attachment: fixed;
+    h2 {
+        width: fit-content;
+        margin: auto;
+        // padding: 5px 20px;
+        font-size: 45px;
+        // border-bottom: 4px solid #36645c;
+    }
+}
+.contact-border-bottom {
+    width: 50%;
+    border-bottom: 2px solid #36645c;
+    @media (max-width: 1024px) {
+        width: 100%;
+    }
+}
+.copyright {
+    background-color: #1c293d;
+}
+footer {
+    // padding-top: 20px;
+    color: #ebebeb;
+    h4 {
+        margin-bottom: 0 !important;
+        margin-top: 10px;
+    }
+    // background: #030512;
+}
+
+footer a img {
+    margin: auto;
+    height: 40px;
+}
+.contact form input,
+.contact form textarea {
+    -webkit-box-shadow: inset 0px 4px 10px -5px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0px 4px 10px -5px rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(39, 65, 75, 0.74);
+    width: 100%;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+    display: block;
+    padding: 10px 15px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    /* background: rgba(3, 3, 3, 0.93); */
+    background: white;
+    font-size: 12pt;
+    margin-bottom: 3px;
+    color: black;
+}
+
+.contact form button {
+    width: 30%;
+    margin: auto;
+}
+
+.contact form button:hover {
+    color: #f46e43;
+}
+
+.contact a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.contact div.col-12.text-center {
+    margin: 10px 0;
+}
+
+.contact address,
+.contact a {
+    font-size: 23px;
+    margin-bottom: 0 !important;
+    color: white;
+}
+
+i {
+    color: $plava;
+    margin-right: 15px;
+}
+
+@media (max-width: 767px) {
+    #about div.col-lg-6:last-of-type {
+        margin-top: 30px;
+    }
+}
